@@ -40,11 +40,11 @@ class NaviBar extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: const FaIcon(FontAwesomeIcons.diagramProject),
-            title: const Text("Projects"),
-            onTap: () => print('Tapped'),
-          ),
+          // ListTile(
+          //   leading: const FaIcon(FontAwesomeIcons.diagramProject),
+          //   title: const Text("Projects"),
+          //   onTap: () => print('Tapped'),
+          // ),
           // ListTile(
           //   leading: const FaIcon(FontAwesomeIcons.certificate),
           //   title: const Text("Certificates"),

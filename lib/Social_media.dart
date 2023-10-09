@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_naman/Nav_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaPage extends StatelessWidget {
@@ -8,6 +9,13 @@ class SocialMediaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const NaviBar(),
+                  ),
+                ),
+            icon: const Icon(Icons.arrow_back)),
         title: const Text('Social Media Icons'),
       ),
       body: Center(

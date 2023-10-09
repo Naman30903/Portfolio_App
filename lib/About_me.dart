@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_naman/Nav_bar.dart';
 
 class AboutMeScreen extends StatelessWidget {
   const AboutMeScreen({super.key});
@@ -18,8 +19,15 @@ class AboutMeScreen extends StatelessWidget {
         ),
         child: Scaffold(
           appBar: AppBar(
+            leading: IconButton(
+                onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const NaviBar(),
+                      ),
+                    ),
+                icon: const Icon(Icons.arrow_back)),
             title: const Text('About Me'),
-            backgroundColor: Color.fromARGB(255, 26, 2, 80),
+            backgroundColor: const Color.fromARGB(255, 26, 2, 80),
           ),
           body: Container(
             decoration: const BoxDecoration(
