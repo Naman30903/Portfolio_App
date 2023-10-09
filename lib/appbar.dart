@@ -27,7 +27,7 @@ class _NavBarState extends State<NavBar> {
                       end: Alignment.bottomRight)),
             ),
             elevation: 4,
-            title: Text(MyApp.title),
+            title: const Text(MyApp.title),
             centerTitle: true,
 
             bottom: const TabBar(indicatorColor: Colors.white, tabs: [
