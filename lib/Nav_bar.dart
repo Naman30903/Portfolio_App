@@ -57,7 +57,7 @@ class NaviBar extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => SocialMediaPage(),
+                  builder: (context) => const SocialMediaPage(),
                 ),
               );
             },
@@ -65,7 +65,7 @@ class NaviBar extends StatelessWidget {
           ListTile(
             leading: const FaIcon(FontAwesomeIcons.phone),
             title: const Text("Contact Me"),
-            onTap: () => print('Tapped'),
+            //  onTap: () => //print('Tapped'),
           ),
         ],
       ),

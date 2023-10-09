@@ -5,6 +5,7 @@ import 'package:portfolio_naman/Nav_bar.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class SocialMediaPage extends StatelessWidget {
+  const SocialMediaPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +81,7 @@ class SocialMediaIconButton extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
 
-  SocialMediaIconButton({required this.icon, required this.onPressed});
+  const SocialMediaIconButton({required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
