@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_naman/Nav_bar.dart';
+// import 'package:portfolio_naman/Nav_bar.dart';
+import 'package:portfolio_naman/appbar.dart';
 
 class AboutMeScreen extends StatelessWidget {
   const AboutMeScreen({super.key});
@@ -22,7 +23,7 @@ class AboutMeScreen extends StatelessWidget {
             leading: IconButton(
                 onPressed: () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const NaviBar(),
+                        builder: (context) => const NavBar(),
                       ),
                     ),
                 icon: const Icon(Icons.arrow_back)),

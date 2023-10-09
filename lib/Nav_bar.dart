@@ -62,9 +62,9 @@ class NaviBar extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: const FaIcon(FontAwesomeIcons.phone),
-            title: const Text("Contact Me"),
+          const ListTile(
+            leading: FaIcon(FontAwesomeIcons.phone),
+            title: Text("Contact Me"),
             //  onTap: () => //print('Tapped'),
           ),
         ],

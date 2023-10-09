@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_naman/appbar.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:portfolio_naman/Nav_bar.dart';
+// import 'package:portfolio_naman/Nav_bar.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class SocialMediaPage extends StatelessWidget {
@@ -13,7 +14,7 @@ class SocialMediaPage extends StatelessWidget {
         leading: IconButton(
           onPressed: () => Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const NaviBar(),
+              builder: (context) => const NavBar(),
             ),
           ),
           icon: const Icon(Icons.arrow_back),
@@ -42,7 +43,7 @@ class SocialMediaPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20), // Add spacing between rows
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

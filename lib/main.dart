@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_naman/appbar.dart';
-import 'package:portfolio_naman/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  static final String title = "Naman's Portfolio";
+  static const String title = "Naman's Portfolio";
 
   @override
   Widget build(BuildContext context) {

@@ -16,6 +16,7 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) => DefaultTabController(
         length: 4,
         child: Scaffold(
+          drawer: NaviBar(),
           appBar: AppBar(
             // backgroundColor: Colors.deepPurple,
             flexibleSpace: Container(
@@ -30,7 +31,7 @@ class _NavBarState extends State<NavBar> {
             centerTitle: true,
 
             bottom: const TabBar(indicatorColor: Colors.white, tabs: [
-              Tab(icon: FaIcon(FontAwesomeIcons.home), text: 'HOME'),
+              Tab(icon: FaIcon(FontAwesomeIcons.house), text: 'HOME'),
               Tab(
                 icon: FaIcon(FontAwesomeIcons.graduationCap),
                 text: 'EDUCATION',
@@ -39,30 +40,30 @@ class _NavBarState extends State<NavBar> {
               Tab(icon: FaIcon(FontAwesomeIcons.code), text: 'SKILLS'),
             ]),
 
-            leading: IconButton(
-              icon: const Icon(Icons.menu),
-              onPressed: () {
-                // Navigator.of(context).pop();
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const NaviBar(),
-                  ),
-                );
-              },
-            ),
+            // leading: IconButton(
+            //   icon: const Icon(Icons.menu),
+            //   onPressed: () {
+            //     // Navigator.of(context).pop();
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(
+            //         builder: (context) => const NaviBar(),
+            //       ),
+            //     );
+            //   },
+            // ),
           ),
           body: TabBarView(
             children: [
-              Center(
+              const Center(
                 child: HomePage(),
               ),
-              Center(
+              const Center(
                 child: EducationPage(),
               ),
               Center(
                 child: ProjectViewDemo(),
               ),
-              Center(
+              const Center(
                 child: SkillWidgetDemo(),
               ),
             ],
@@ -89,13 +90,13 @@ class NaviBar extends StatelessWidget {
             accountEmail: const Text('namanjain30903@gmail.com'),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
-                child: Image.asset('profile.jpg'),
+                child: Image.asset('assets/profile.jpg'),
               ),
             ),
             decoration: const BoxDecoration(
                 color: Colors.deepPurple,
                 image: DecorationImage(
-                  image: AssetImage('images/backgd.jpg'),
+                  image: AssetImage('assets/backgd.jpg'),
                   fit: BoxFit.cover,
                 )),
           ),
@@ -129,7 +130,7 @@ class NaviBar extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                  builder: (context) => SocialMediaPage(),
+                  builder: (context) => const SocialMediaPage(),
                 ),
               );
             },
@@ -146,6 +147,7 @@ class NaviBar extends StatelessWidget {
 }
 
 class EducationPage extends StatelessWidget {
+  const EducationPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,7 +155,7 @@ class EducationPage extends StatelessWidget {
       //     // title: const Text('Education'),
       //     ),
       body: ListView(
-        children: [
+        children: const [
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -189,7 +191,7 @@ class EducationContainer extends StatelessWidget {
   final String percentage;
   final String extraInfo;
 
-  EducationContainer({
+  const EducationContainer({
     required this.instituteName,
     required this.course,
     required this.percentage,
@@ -201,7 +203,6 @@ class EducationContainer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.all(8),
-      
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         borderRadius: BorderRadius.circular(8),
@@ -227,6 +228,7 @@ class EducationContainer extends StatelessWidget {
 }
 
 class SkillWidgetDemo extends StatelessWidget {
+  const SkillWidgetDemo({super.key});
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -309,7 +311,7 @@ class SkillWidget extends StatelessWidget {
 class ProjectViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -319,7 +321,7 @@ class ProjectViewDemo extends StatelessWidget {
               description: 'A system for managing bank operations.',
               color: Colors.blue,
             ),
-            const SizedBox(height: 16), // Add vertical spacing between projects
+            SizedBox(height: 16), // Add vertical spacing between projects
             ProjectView(
               projectName: 'Basic Hotel Management System',
               description:
@@ -338,7 +340,7 @@ class ProjectView extends StatelessWidget {
   final String description;
   final Color color;
 
-  ProjectView(
+  const ProjectView(
       {required this.projectName,
       required this.description,
       required this.color});
@@ -378,6 +380,7 @@ class ProjectView extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
